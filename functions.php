@@ -38,6 +38,6 @@ function berry_scripts() {
     } else {
         $need_jquery = false;
     }
-	wp_enqueue_script( 'berry-js', get_stylesheet_directory_uri() . '/js/main.js', array(), filemtime( get_stylesheet_directory_uri() . '/js/main.js' ), $need_jquery );
+	wp_enqueue_script( 'berry-js', get_stylesheet_directory_uri() . '/js/main.js', array(), filemtime( get_stylesheet_directory() . '/js/main.js' ), $need_jquery );
 }
 add_action( 'wp_enqueue_scripts', 'berry_scripts' , 20 );
